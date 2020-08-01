@@ -6,3 +6,10 @@ export const thread = {
   success: (response, videoId) => createAction(COMMENT_THREAD[SUCCESS], {response, videoId}),
   failure: (response) => createAction(COMMENT_THREAD[FAILURE], {response}),
 };
+
+export const ADD_COMMENT = createRequestTypes('ADD_COMMENT');
+export const addComment = {
+  request: (comment) => createAction(ADD_COMMENT[REQUEST], {comment}),
+  success: (response) => createAction(ADD_COMMENT[SUCCESS], {response}),
+  failure: (response) => createAction(ADD_COMMENT[FAILURE], {response}),
+}

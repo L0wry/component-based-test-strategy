@@ -15,7 +15,7 @@ export class Watch extends React.Component {
   render() {
     const videoId = this.getVideoId();
     return (
-      <WatchContent videoId={videoId} channelId={this.props.channelId} bottomReachedCallback={this.fetchMoreComments}
+      <WatchContent videoId={videoId} addComment={this.props.addComment} channelId={this.props.channelId} bottomReachedCallback={this.fetchMoreComments}
                     nextPageToken={this.props.nextPageToken}/>
     );
   }
@@ -60,9 +60,10 @@ function mapStateToProps(state, props) {
 }
 
 function mapDispatchToProps(dispatch) {
+  const addComment = commentActions.addComment.request;
   const fetchWatchDetails = watchActions.details.request;
   const fetchCommentThread = commentActions.thread.request;
-  return bindActionCreators({fetchWatchDetails, fetchCommentThread}, dispatch);
+  return bindActionCreators({fetchWatchDetails, fetchCommentThread, addComment}, dispatch);
 }
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Watch));

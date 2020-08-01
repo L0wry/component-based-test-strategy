@@ -16,7 +16,7 @@ export class Comments extends React.Component {
     return(
       <div>
         <CommentsHeader amountComments={this.props.amountComments}/>
-        <AddComment key='add-comment'/>
+        <AddComment addComment={this.props.addComment} key='add-comment'/>
         {comments}
       </div>
     );

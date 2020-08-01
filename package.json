@@ -2,6 +2,14 @@
   "name": "youtube-react",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "storybook": "start-storybook",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "stubby": "stubby -d ./stubby.yml"
+  },
   "dependencies": {
     "@storybook/addon-queryparams": "^5.3.19",
     "javascript-time-ago": "^2.0.7",
@@ -20,18 +28,13 @@
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^0.88.2"
   },
-  "scripts": {
-    "storybook": "start-storybook",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
   "devDependencies": {
+    "cypress": "4.8.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "enzyme-to-json": "^3.4.4",
-    "@storybook/react": "5.3.19"
+    "@storybook/react": "5.3.19",
+    "stubby":"5.0.0"
   },
   "browserslist": [
     ">0.2%",

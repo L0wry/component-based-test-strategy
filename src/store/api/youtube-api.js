@@ -55,6 +55,13 @@ export function buildCommentThreadRequest(videoId, nextPageToken) {
     }, null);
 }
 
+export function buildAddCommentRequest({comment}) {
+  console.log(comment)
+  return buildApiRequest('POST',
+    '/youtube/v3/comment',
+    {}, {message: comment});
+}
+
 export function buildSearchRequest(query, nextPageToken, amount = 12) {
   return buildApiRequest('GET',
     '/youtube/v3/search',

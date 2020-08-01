@@ -47,8 +47,6 @@ class Search extends React.Component {
       this.props.searchForVideos(this.getSearchQuery(), this.props.nextPageToken, 25);
     }
   };
-
-
 }
 
 function mapDispatchToProps(dispatch) {
