@@ -8,7 +8,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { youtubeLibraryLoaded } from '../store/actions/api';
 
-const API_KEY = 'AIzaSyCOAKnSuDjVhL01ZdgYh9ivQ3KXbhhL2qQ';
+const API_KEY = process.env.API_KEY
 
 export default function setupStory(story) {
     const store = configureStore();
