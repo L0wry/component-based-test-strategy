@@ -13,7 +13,7 @@
   "dependencies": {
     "@storybook/addon-queryparams": "^5.3.19",
     "javascript-time-ago": "^2.0.7",
-    "node-sass": "^4.14.0",
+    "node-sass": "^7.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-linkify": "^1.0.0-alpha",
